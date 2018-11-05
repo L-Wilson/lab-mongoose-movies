@@ -1,0 +1,15 @@
+<h2>Edit celeb</h2>
+
+{{#if error}}
+<div class="alert-red">
+  {{error}}
+</div>
+{{/if}}
+
+<form action="/celebrities/{{this._id}}/edit" method="post">
+  Name: <input value="{{this.name}}" type="text" name="name"> <br>
+  Occupation: <input value="{{this.occupation}}" type="text" name="occupation"><br>
+  Catch phrase: <input value="{{this.catchPhrase}}" type="text" name="catchPhrase"><br>
+
+  <button type="submit">Edit celeb</button>
+</form>
